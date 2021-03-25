@@ -1,0 +1,2 @@
+class ShortTermGoal < ApplicationRecord
+end

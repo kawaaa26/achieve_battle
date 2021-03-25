@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @short_term_goal.title %>
+</p>
+
+<p>
+  <strong>Detail:</strong>
+  <%= @short_term_goal.detail %>
+</p>
+
+<p>
+  <strong>Experience:</strong>
+  <%= @short_term_goal.experience %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @short_term_goal.image %>
+</p>
+
+<%= link_to 'Edit', edit_short_term_goal_path(@short_term_goal) %> |
+<%= link_to 'Back', short_term_goals_path %>
