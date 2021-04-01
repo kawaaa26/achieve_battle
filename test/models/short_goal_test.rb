@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class ShortTermGoalTest < ActiveSupport::TestCase
+class ShortGoalTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
