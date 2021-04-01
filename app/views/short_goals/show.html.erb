@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @short_goal.title %>
+</p>
+
+<p>
+  <strong>Detail:</strong>
+  <%= @short_goal.detail %>
+</p>
+
+<p>
+  <strong>Experience:</strong>
+  <%= @short_goal.experience %>
+</p>
+
+<!-- <p> -->
+<!--  <strong>Images:</strong> -->
+
+  <%# if @short_goal.images.attached? %>
+    <%# @short_goal.images.each do |image| %>
+      <%#= image_tag image.variant(resize_to_limit: [300, 300]) %>
+    <%# end %>
+  <%# end %>
+<!-- </p> -->
+
+<%= link_to 'Edit', edit_short_goal_path(@short_goal) %> |
+<%= link_to 'Back', short_goals_path %>
