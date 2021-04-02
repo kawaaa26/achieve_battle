@@ -21,15 +21,13 @@
     <%= form.text_area :detail %>
   </div>
 
-  <!--  <div class="field"> -->
-    <%#= form.label :images %>
-    <%#= form.file_field :images, direct_upload: true, multiple: true %>
-  <!--  </div> -->
-
-  <!--  <div class="field"> -->
-    <%#= form.label :experience %>
-    <%#= form.text_field :experience %>
-  <!--  </div> -->
+  <div class="field">
+    <%= form.label :image %>
+    <%= form.file_field :images, direct_upload: true, multiple: true %>
+    <% if @short_goal.images.attached? %>
+      <%= image_tag @short_goal.images %>
+    <% end %>
+  </div>
 
   <div class="actions">
     <%= form.submit %>

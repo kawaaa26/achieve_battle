@@ -43,6 +43,7 @@ class ShortGoalsController < ApplicationController
   end
 
   def destroy
+    @short_goal.images.purge if @short_goal.images.attached?
     @short_goal.destroy
     respond_to do |format|
       format.html { redirect_to short_goals_url, notice: "Short goal was successfully destroyed." }
@@ -56,7 +57,6 @@ class ShortGoalsController < ApplicationController
     end
 
     def short_goal_params
-      params.require(:short_goal).permit(:title, :detail, :experience)
-      # params.require(:short_goal).permit(:title, :detail, :experience, images: [])
+      params.require(:short_goal).permit(:title, :detail, :experience, images: [])
     end
 end
